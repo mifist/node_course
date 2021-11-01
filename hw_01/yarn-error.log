@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn build
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  12.22.6
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/yaroslav/SourceCode/node.js/Lesson1/package.json: Unexpected token } in JSON at position 647
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "node.js-course",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "repository": "git@github.com:robot-dreams-code/node.js.git",
+    "author": "Yaroslav Slipchuk <p380685005253@google.com>",
+    "license": "MIT",
+    "scripts": {
+      "build": "npx rimraf dist/ && npx tsc",
+      "start": "node dist/index.js",
+      "tslint": "npx tslint -c tslint.json -p tsconfig.json",
+      "test": "npx jest --coverage --forceExit --detectOpenHandles",
+      "tslint-fix": "npx tslint -c tslint.json -p tsconfig.json --fix",
+      "buildAll": "yarn cache clean && npx rimraf node_modules/ && npx rimraf yarn.lock && yarn && yarn build",
+    },
+    "dependencies": {
+      "@types/node": "^12.12.26"
+    },
+    "devDependencies": {
+      "@types/jest": "^24.0.6",
+      "tslint": "6.1.3",
+      "tslint-config-airbnb": "^5.11.2",
+      "typescript": "4.2.3",
+      "jest": "^23.6.0",
+      "ts-jest": "^24.0.0"
+    },
+    "_moduleAliases": {
+      "@interfaces": "dist/interfaces"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

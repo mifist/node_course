@@ -1,0 +1,38 @@
+{
+  "name": "node.js-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": "git@github.com:robot-dreams-code/node.js.git",
+  "author": "Yaroslav Slipchuk <p380685005253@google.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx rimraf dist/ && npx tsc",
+    "start": "node dist/index.js",
+    "tslint": "npx tslint -c tslint.json -p tsconfig.json",
+    "test": "npx jest --coverage --forceExit --detectOpenHandles",
+    "tslint-fix": "npx tslint -c tslint.json -p tsconfig.json --fix",
+    "buildAll": "yarn cache clean && npx rimraf node_modules/ && npx rimraf yarn.lock && yarn && yarn build"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.26",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/mocha": "^9.0.0",
+    "jest": "^27.3.1",
+    "jest-axe": "^4.1.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "jest-in-case": "^1.0.2",
+    "ts-jest": "^27.0.7",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^4.4.4"
+  },
+  "_moduleAliases": {
+    "@interfaces": "dist/interfaces"
+  }
+}
