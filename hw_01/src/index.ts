@@ -1,6 +1,6 @@
-//import { DecToHex } from './decToHex';
+// import { DecToHex } from './decToHex';
 import { GenerateData } from './generateData';
-/* 
+/*
 function main() {
     console.time('Hello1');
     const input = 10;
@@ -15,15 +15,15 @@ function main() {
 main(); */
 
 function productData() {
-    console.time("generateData");
+    console.time('generateData');
     const dataAmount = 1000;
     const result = GenerateData(dataAmount);
-    //console.table(result);
-    console.timeEnd("generateData");
+    // console.table(result);
+    console.timeEnd('generateData');
 
-    console.time("get50");
+    console.time('get50');
     console.table(result[50]);
-    console.timeEnd("get50");
+    console.timeEnd('get50');
 
 }
 
