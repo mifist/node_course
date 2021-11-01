@@ -15,16 +15,12 @@ function main() {
 main(); */
 
 function productData() {
-    console.time("generateData");
+    console.time('generateData-50');
     const dataAmount = 1000;
     const result = GenerateData(dataAmount);
     //console.table(result);
-    console.timeEnd("generateData");
-
-    console.time("get50");
     console.table(result[50]);
-    console.timeEnd("get50");
-
+    console.timeEnd('generateData-50');
 }
 
 productData();
